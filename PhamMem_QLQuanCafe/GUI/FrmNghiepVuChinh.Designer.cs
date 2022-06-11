@@ -39,11 +39,12 @@ namespace GUI
             this.lbGreen = new DevExpress.XtraEditors.LabelControl();
             this.lbTrong = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlGroup7 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup8 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gcNhomSP = new DevExpress.XtraGrid.GridControl();
             this.gvNhomSP = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMaNhom = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -60,6 +61,14 @@ namespace GUI
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcMid2 = new DevExpress.XtraLayout.LayoutControl();
+            this.txtThanhTienOfMon = new DevExpress.XtraEditors.TextEdit();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.bar2 = new DevExpress.XtraBars.Bar();
+            this.btnRefresh = new DevExpress.XtraBars.BarButtonItem();
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnHuyBan = new DevExpress.XtraEditors.SimpleButton();
             this.btnMoBan = new DevExpress.XtraEditors.SimpleButton();
             this.txtTenMon = new DevExpress.XtraEditors.MemoEdit();
@@ -85,6 +94,7 @@ namespace GUI
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcRight = new DevExpress.XtraLayout.LayoutControl();
             this.txtTienThua = new DevExpress.XtraEditors.TextEdit();
             this.sleBan_CTHD = new DevExpress.XtraEditors.SearchLookUpEdit();
@@ -137,26 +147,17 @@ namespace GUI
             this.lbBan = new DevExpress.XtraLayout.LayoutControlItem();
             this.lbTienThua = new DevExpress.XtraLayout.LayoutControlItem();
             this.acThongBao = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.bar2 = new DevExpress.XtraBars.Bar();
-            this.btnRefresh = new DevExpress.XtraBars.BarButtonItem();
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.txtThanhTienOfMon = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup8 = new DevExpress.XtraLayout.LayoutControlGroup();
             ((System.ComponentModel.ISupportInitialize)(this.lcMid1)).BeginInit();
             this.lcMid1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lcLeft)).BeginInit();
             this.lcLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcNhomSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvNhomSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcTU)).BeginInit();
@@ -168,6 +169,8 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcMid2)).BeginInit();
             this.lcMid2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtThanhTienOfMon.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenMon.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
@@ -187,6 +190,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcRight)).BeginInit();
             this.lcRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTienThua.Properties)).BeginInit();
@@ -227,10 +231,6 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.lbTienCanTT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbBan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbTienThua)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtThanhTienOfMon.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -334,23 +334,18 @@ namespace GUI
             this.layoutControlGroup7.Size = new System.Drawing.Size(489, 683);
             this.layoutControlGroup7.TextVisible = false;
             // 
-            // layoutControlItem19
+            // layoutControlGroup8
             // 
-            this.layoutControlItem19.Control = this.fplHienThiBan;
-            this.layoutControlItem19.Location = new System.Drawing.Point(0, 25);
-            this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(465, 608);
-            this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem19.TextVisible = false;
-            // 
-            // layoutControlItem21
-            // 
-            this.layoutControlItem21.Control = this.lbTrong;
-            this.layoutControlItem21.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem21.Name = "layoutControlItem21";
-            this.layoutControlItem21.Size = new System.Drawing.Size(47, 25);
-            this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem21.TextVisible = false;
+            this.layoutControlGroup8.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem22,
+            this.layoutControlItem21,
+            this.layoutControlItem23,
+            this.layoutControlItem24,
+            this.layoutControlItem19});
+            this.layoutControlGroup8.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup8.Name = "layoutControlGroup8";
+            this.layoutControlGroup8.Size = new System.Drawing.Size(489, 683);
+            this.layoutControlGroup8.Text = "Danh sách bàn";
             // 
             // layoutControlItem22
             // 
@@ -360,6 +355,15 @@ namespace GUI
             this.layoutControlItem22.Size = new System.Drawing.Size(138, 25);
             this.layoutControlItem22.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem22.TextVisible = false;
+            // 
+            // layoutControlItem21
+            // 
+            this.layoutControlItem21.Control = this.lbTrong;
+            this.layoutControlItem21.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem21.Name = "layoutControlItem21";
+            this.layoutControlItem21.Size = new System.Drawing.Size(47, 25);
+            this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem21.TextVisible = false;
             // 
             // layoutControlItem23
             // 
@@ -378,6 +382,15 @@ namespace GUI
             this.layoutControlItem24.Size = new System.Drawing.Size(189, 25);
             this.layoutControlItem24.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem24.TextVisible = false;
+            // 
+            // layoutControlItem19
+            // 
+            this.layoutControlItem19.Control = this.fplHienThiBan;
+            this.layoutControlItem19.Location = new System.Drawing.Point(0, 25);
+            this.layoutControlItem19.Name = "layoutControlItem19";
+            this.layoutControlItem19.Size = new System.Drawing.Size(465, 608);
+            this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem19.TextVisible = false;
             // 
             // gcNhomSP
             // 
@@ -597,6 +610,88 @@ namespace GUI
             this.lcMid2.Size = new System.Drawing.Size(199, 707);
             this.lcMid2.TabIndex = 13;
             this.lcMid2.Text = "layoutControl1";
+            // 
+            // txtThanhTienOfMon
+            // 
+            this.txtThanhTienOfMon.Enabled = false;
+            this.txtThanhTienOfMon.Location = new System.Drawing.Point(24, 339);
+            this.txtThanhTienOfMon.MenuManager = this.barManager1;
+            this.txtThanhTienOfMon.Name = "txtThanhTienOfMon";
+            this.txtThanhTienOfMon.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtThanhTienOfMon.Properties.Appearance.Options.UseFont = true;
+            this.txtThanhTienOfMon.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtThanhTienOfMon.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtThanhTienOfMon.Size = new System.Drawing.Size(151, 28);
+            this.txtThanhTienOfMon.StyleController = this.lcMid2;
+            this.txtThanhTienOfMon.TabIndex = 23;
+            // 
+            // barManager1
+            // 
+            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
+            this.bar2});
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.btnRefresh});
+            this.barManager1.MainMenu = this.bar2;
+            this.barManager1.MaxItemId = 3;
+            // 
+            // bar2
+            // 
+            this.bar2.BarName = "Main menu";
+            this.bar2.DockCol = 0;
+            this.bar2.DockRow = 0;
+            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnRefresh)});
+            this.bar2.OptionsBar.MultiLine = true;
+            this.bar2.OptionsBar.UseWholeRow = true;
+            this.bar2.Text = "Main menu";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Caption = "Refresh";
+            this.btnRefresh.Id = 0;
+            this.btnRefresh.ImageOptions.Image = global::GUI.Properties.Resources.recurrence_16x161;
+            this.btnRefresh.ImageOptions.LargeImage = global::GUI.Properties.Resources.recurrence_32x321;
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnRefresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRefresh_ItemClick);
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(5, 5);
+            this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Size = new System.Drawing.Size(1760, 30);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(5, 742);
+            this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Size = new System.Drawing.Size(1760, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(5, 35);
+            this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 707);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(1765, 35);
+            this.barDockControlRight.Manager = this.barManager1;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 707);
             // 
             // btnHuyBan
             // 
@@ -874,6 +969,16 @@ namespace GUI
             this.layoutControlItem18.Size = new System.Drawing.Size(155, 43);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextVisible = false;
+            // 
+            // layoutControlItem25
+            // 
+            this.layoutControlItem25.Control = this.txtThanhTienOfMon;
+            this.layoutControlItem25.Location = new System.Drawing.Point(0, 279);
+            this.layoutControlItem25.Name = "layoutControlItem25";
+            this.layoutControlItem25.Size = new System.Drawing.Size(155, 52);
+            this.layoutControlItem25.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 10, 10);
+            this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem25.TextVisible = false;
             // 
             // lcRight
             // 
@@ -1551,111 +1656,6 @@ namespace GUI
             // 
             this.acThongBao.AutoFormDelay = 1000;
             // 
-            // barManager1
-            // 
-            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar2});
-            this.barManager1.DockControls.Add(this.barDockControlTop);
-            this.barManager1.DockControls.Add(this.barDockControlBottom);
-            this.barManager1.DockControls.Add(this.barDockControlLeft);
-            this.barManager1.DockControls.Add(this.barDockControlRight);
-            this.barManager1.Form = this;
-            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.btnRefresh});
-            this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 3;
-            // 
-            // bar2
-            // 
-            this.bar2.BarName = "Main menu";
-            this.bar2.DockCol = 0;
-            this.bar2.DockRow = 0;
-            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnRefresh)});
-            this.bar2.OptionsBar.MultiLine = true;
-            this.bar2.OptionsBar.UseWholeRow = true;
-            this.bar2.Text = "Main menu";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Caption = "Refresh";
-            this.btnRefresh.Id = 0;
-            this.btnRefresh.ImageOptions.Image = global::GUI.Properties.Resources.recurrence_16x161;
-            this.btnRefresh.ImageOptions.LargeImage = global::GUI.Properties.Resources.recurrence_32x321;
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.btnRefresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRefresh_ItemClick);
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(5, 5);
-            this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1760, 30);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(5, 742);
-            this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1760, 0);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(5, 35);
-            this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 707);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1765, 35);
-            this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 707);
-            // 
-            // txtThanhTienOfMon
-            // 
-            this.txtThanhTienOfMon.Enabled = false;
-            this.txtThanhTienOfMon.Location = new System.Drawing.Point(24, 339);
-            this.txtThanhTienOfMon.MenuManager = this.barManager1;
-            this.txtThanhTienOfMon.Name = "txtThanhTienOfMon";
-            this.txtThanhTienOfMon.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtThanhTienOfMon.Properties.Appearance.Options.UseFont = true;
-            this.txtThanhTienOfMon.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtThanhTienOfMon.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtThanhTienOfMon.Size = new System.Drawing.Size(151, 28);
-            this.txtThanhTienOfMon.StyleController = this.lcMid2;
-            this.txtThanhTienOfMon.TabIndex = 23;
-            // 
-            // layoutControlItem25
-            // 
-            this.layoutControlItem25.Control = this.txtThanhTienOfMon;
-            this.layoutControlItem25.Location = new System.Drawing.Point(0, 279);
-            this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(155, 52);
-            this.layoutControlItem25.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 10, 10);
-            this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem25.TextVisible = false;
-            // 
-            // layoutControlGroup8
-            // 
-            this.layoutControlGroup8.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem22,
-            this.layoutControlItem21,
-            this.layoutControlItem23,
-            this.layoutControlItem24,
-            this.layoutControlItem19});
-            this.layoutControlGroup8.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup8.Name = "layoutControlGroup8";
-            this.layoutControlGroup8.Size = new System.Drawing.Size(489, 683);
-            this.layoutControlGroup8.Text = "Danh sách bàn";
-            // 
             // FrmNghiepVuChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -1668,6 +1668,7 @@ namespace GUI
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.IconOptions.Image = global::GUI.Properties.Resources.iconcoffee;
             this.Name = "FrmNghiepVuChinh";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1679,11 +1680,12 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.lcLeft)).EndInit();
             this.lcLeft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcNhomSP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvNhomSP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcTU)).EndInit();
@@ -1695,6 +1697,8 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcMid2)).EndInit();
             this.lcMid2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtThanhTienOfMon.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenMon.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
@@ -1714,6 +1718,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcRight)).EndInit();
             this.lcRight.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtTienThua.Properties)).EndInit();
@@ -1754,10 +1759,6 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.lbTienCanTT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbBan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbTienThua)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtThanhTienOfMon.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
