@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_QuanCafeUpdate" Class="QL_QuanCafeUpdateDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MMT-LEVANTHONG\SQLEXPRESS;Initial Catalog=QL_QuanCafeUpdate;Integrated Security=True" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="QL_QuanCafeUpdateConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblSize" Member="tblSizes">
+    <Type Name="tblSize">
+      <Column Name="MaSize" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenSize" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(600)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblBangGia" Member="tblBangGias">
+    <Type Name="tblBangGia">
+      <Column Name="MaBangGia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaSP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaSize" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NgayCapNhat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCaLamViec" Member="tblCaLamViecs">
+    <Type Name="tblCaLamViec">
+      <Column Name="MaCa" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenCa" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="GioBD" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GioKT" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SoTien" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblChamCong" Member="tblChamCongs">
+    <Type Name="tblChamCong">
+      <Column Name="MaChamCong" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Thang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Nam" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblChiTietChamCong" Member="tblChiTietChamCongs">
+    <Type Name="tblChiTietChamCong">
+      <Column Name="MaChamCong" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaDKCa" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ngay1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay3" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay4" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay5" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay6" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay7" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay8" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay9" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay10" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay11" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay12" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay13" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay14" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay15" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay16" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay17" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay18" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay19" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay20" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay21" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay22" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay23" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay24" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay25" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay26" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay27" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay28" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay29" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay30" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ngay31" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblChiTietHD" Member="tblChiTietHDs">
+    <Type Name="tblChiTietHD">
+      <Column Name="MaHD" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaBangGia" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonGia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ThanhTien" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCTPhieuNhap" Member="tblCTPhieuNhaps">
+    <Type Name="tblCTPhieuNhap">
+      <Column Name="MaPN" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaHH" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonGiaNhap" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblDangKyCa" Member="tblDangKyCas">
+    <Type Name="tblDangKyCa">
+      <Column Name="MaDKCa" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaCa" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MaNV" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NgayDKCa" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblHangHoa" Member="tblHangHoas">
+    <Type Name="tblHangHoa">
+      <Column Name="MaHH" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenHH" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DVT" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblKhachHang" Member="tblKhachHangs">
+    <Type Name="tblKhachHang">
+      <Column Name="MaKH" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenKH" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GioITinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblNhaCungCap" Member="tblNhaCungCaps">
+    <Type Name="tblNhaCungCap">
+      <Column Name="MaNCC" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenNCC" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblNhomSP" Member="tblNhomSPs">
+    <Type Name="tblNhomSP">
+      <Column Name="MaNhomSP" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenNhomSP" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblPhieuNhap" Member="tblPhieuNhaps">
+    <Type Name="tblPhieuNhap">
+      <Column Name="MaPN" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NgayLap" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TongTienNhap" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MaNCC" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSanPham" Member="tblSanPhams">
+    <Type Name="tblSanPham">
+      <Column Name="MaSP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenSP" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Hinh" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MaNhomSP" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblNhanVien" Member="tblNhanViens">
+    <Type Name="tblNhanVien">
+      <Column Name="MaNV" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenNV" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="CCCD" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ChucVu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayVaoLam" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblBan" Member="tblBans">
+    <Type Name="tblBan">
+      <Column Name="MaBan" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenBan" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SoCho" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblHoaDonBanHang" Member="tblHoaDonBanHangs">
+    <Type Name="tblHoaDonBanHang">
+      <Column Name="MaHD" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaNV" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaKH" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaBan" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NgayLap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PhuThu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GiamGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

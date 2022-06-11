@@ -1,0 +1,12 @@
+E:\PTHTTT\PhamMem_QLQuanCafe\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\PTHTTT\PhamMem_QLQuanCafe\BLL\bin\Debug\BLL.dll
+E:\PTHTTT\PhamMem_QLQuanCafe\BLL\bin\Debug\BLL.pdb
+E:\PTHTTT\PhamMem_QLQuanCafe\BLL\bin\Debug\DAL.dll
+E:\PTHTTT\PhamMem_QLQuanCafe\BLL\bin\Debug\DTO.dll
+E:\PTHTTT\PhamMem_QLQuanCafe\BLL\bin\Debug\DAL.pdb
+E:\PTHTTT\PhamMem_QLQuanCafe\BLL\bin\Debug\DTO.pdb
+E:\PTHTTT\PhamMem_QLQuanCafe\BLL\bin\Debug\DTO.dll.config
+E:\PTHTTT\PhamMem_QLQuanCafe\BLL\obj\Debug\BLL.csproj.CopyComplete
+E:\PTHTTT\PhamMem_QLQuanCafe\BLL\obj\Debug\BLL.dll
+E:\PTHTTT\PhamMem_QLQuanCafe\BLL\obj\Debug\BLL.pdb
+E:\PTHTTT\PhamMem_QLQuanCafe\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
