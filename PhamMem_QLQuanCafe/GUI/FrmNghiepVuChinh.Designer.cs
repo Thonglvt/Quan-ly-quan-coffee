@@ -1655,6 +1655,9 @@ namespace GUI
             // acThongBao
             // 
             this.acThongBao.AutoFormDelay = 1000;
+            this.acThongBao.ControlBoxPosition = DevExpress.XtraBars.Alerter.AlertFormControlBoxPosition.Right;
+            this.acThongBao.FormDisplaySpeed = DevExpress.XtraBars.Alerter.AlertFormDisplaySpeed.Fast;
+            this.acThongBao.FormLocation = DevExpress.XtraBars.Alerter.AlertFormLocation.BottomLeft;
             // 
             // FrmNghiepVuChinh
             // 

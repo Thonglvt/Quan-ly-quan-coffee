@@ -62,16 +62,18 @@ namespace DAL
         public List<DTO_KhachHangHoaDon> getAll_KH_BG_SP_ByMaHD(string pMaHD)
         {
             db = new QL_QuanCafeUpdateDataContext();
-            var lst = from a in db.tblChiTietHDs.Where(t=>t.MaHD== pMaHD)
+            var lst = from a in db.tblChiTietHDs.Where(t => t.MaHD == pMaHD)
                       join b in db.tblBangGias on a.MaBangGia equals b.MaBangGia
                       join c in db.tblSanPhams on b.MaSP equals c.MaSP
                       join d in db.tblHoaDonBanHangs on a.MaHD equals d.MaHD
+                      join e in db.tblKhachHangs on d.MaKH equals e.MaKH
                       select new DTO_KhachHangHoaDon
                       {
                           STT = 0,
                           MaHD = a.MaHD,
                           MaNV = d.MaNV,
                           MaBan = d.MaBan,
+                          TenKH = e.TenKH,
                           NgayLap = Convert.ToDateTime(d.NgayLap),
                           PhuThu = Convert.ToInt32(d.PhuThu),
                           GiamGia = Convert.ToInt32(d.GiamGia),

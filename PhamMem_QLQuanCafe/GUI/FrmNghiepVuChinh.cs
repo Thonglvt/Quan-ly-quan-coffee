@@ -38,6 +38,11 @@ namespace GUI
         }
 
        
+       
+        public static int tableWidth = 100;
+        public static int tableHeigth = 100;
+
+        #region Method
         private void loaddAll()
         {
             loadBan();
@@ -80,10 +85,6 @@ namespace GUI
                 txtTrangThai.Text = (this.HD_HienTai.TrangThai == true) ? "Có khách" : "Trống";
             }
         }
-        public static int tableWidth = 100;
-        public static int tableHeigth = 100;
-
-        #region Method
         void doiTrangThaiBan(bool? pCoNguoi, ref Button btn)
         {
             if (pCoNguoi == true)
@@ -498,6 +499,11 @@ namespace GUI
                     string kqUpdHD = bllHDBH.chuyenDoiTrangThaiHD(DTO_SessionHoaDon.HD_HienTai.MaHD);
                     //Cập nhật trạng thái bàn thành trống
                     string kqUpdBan = bllBan.chuyenDoiTrangThaiBan(DTO_SessionHoaDon.HD_HienTai.MaBan);
+                using (FrmPrint frm = new FrmPrint())
+                {
+                    frm.printInvoice(DTO_SessionHoaDon.HDKH_HienTai);
+                    frm.ShowDialog();
+                }
                 loaddAll();
                 emptyCTHD();
                 btnThanhToan.Enabled = false;
@@ -505,6 +511,7 @@ namespace GUI
                 btnHuyBan.Enabled = false;
                 btnTachBan.Enabled = false;
                 btnGopBan.Enabled = false;
+                
             }
             catch (Exception)
             {

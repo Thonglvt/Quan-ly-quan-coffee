@@ -383,7 +383,6 @@ E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\bin\Debug\de\DevExpr
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\bin\Debug\es\DevExpress.Pdf.v19.2.Core.resources.dll
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\bin\Debug\ja\DevExpress.Pdf.v19.2.Core.resources.dll
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\bin\Debug\ru\DevExpress.Pdf.v19.2.Core.resources.dll
-E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\obj\Debug\GUI.FrmCaLamViec.resources
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\obj\Debug\GUI.FrmChamCong.resources
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\obj\Debug\GUI.FrmChiTietCong.resources
@@ -398,3 +397,9 @@ E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\obj\Debug\GUI.csproj
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\obj\Debug\GUI.csproj.CopyComplete
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\obj\Debug\GUI.exe
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\obj\Debug\GUI.pdb
+E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\bin\Debug\DevExpress.RichEdit.v19.2.Export.dll
+E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\bin\Debug\Dapper.dll
+E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\bin\Debug\Dapper.xml
+E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\obj\Debug\GUI.FrmPrint.resources
+E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\obj\Debug\GUI.InvoiceReport.resources
