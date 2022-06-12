@@ -10,5 +10,7 @@ namespace DTO
     {
         public static tblHoaDonBanHang HD_HienTai = new tblHoaDonBanHang();
         public static List<DTO_KhachHangHoaDon> HDKH_HienTai = new List<DTO_KhachHangHoaDon>();
+        public static tblBan banDangChon = new tblBan();
+
     }
 }

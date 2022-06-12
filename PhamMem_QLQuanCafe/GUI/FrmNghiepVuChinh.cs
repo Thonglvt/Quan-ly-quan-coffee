@@ -175,8 +175,8 @@ namespace GUI
             bllHDBH = new BLL_HoaDonBanHang();
             Button btn = sender as Button;
             //Lưu thôn tin bàn đang chọn
-            banDangChon = new tblBan();
-            banDangChon = bllBan.findBanByMa(btn.Name);
+            DTO_SessionHoaDon.banDangChon = new tblBan();
+            DTO_SessionHoaDon.banDangChon = bllBan.findBanByMa(btn.Name);
 
             //Nếu bàn trống
             if (btn.BackColor != Color.Red)
@@ -356,7 +356,7 @@ namespace GUI
             hdbh.MaHD = bllACID.create_ID_HD(); //Tạo mã hóa đơn tự động 
             hdbh.MaNV = "06062022NV000001";
             hdbh.MaKH = "06062022KH000001";
-            hdbh.MaBan = this.banDangChon.MaBan;
+            hdbh.MaBan = DTO_SessionHoaDon.banDangChon.MaBan;
             hdbh.NgayLap = DateTime.Now;
             hdbh.PhuThu = 0;
             hdbh.GiamGia = 0;
@@ -373,14 +373,14 @@ namespace GUI
             }
             else
             {
-                XtraMessageBox.Show("Đã mở "+this.banDangChon.TenBan+" [Trạng thái: Có khách]", "Thông báo [Message]"
+                XtraMessageBox.Show("Đã mở "+ DTO_SessionHoaDon.banDangChon.TenBan+" [Trạng thái: Có khách]", "Thông báo [Message]"
                           , MessageBoxButtons.OK, MessageBoxIcon.None);
             }
             //Gán dữ liệu cho các text HD
             loadTextboxHD();
             //Cập nhật trạng thái bàn thành có khách (true)
-            this.banDangChon.TrangThai = true;
-            string kqUpdate = bllBan.update(banDangChon);
+            DTO_SessionHoaDon.banDangChon.TrangThai = true;
+            string kqUpdate = bllBan.update(DTO_SessionHoaDon.banDangChon);
             if(!kqUpdate.Equals("1"))
             {
                 XtraMessageBox.Show("Error: "+ kqUpdate, "Thông báo [Message]"
