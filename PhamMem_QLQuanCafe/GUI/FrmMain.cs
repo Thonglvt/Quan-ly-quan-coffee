@@ -64,5 +64,10 @@ namespace GUI
             frm.ShowDialog();
 
         }
+
+        private void btnHoaDon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            addForm(typeof(FrmHoaDonBanHang));
+        }
     }
 }

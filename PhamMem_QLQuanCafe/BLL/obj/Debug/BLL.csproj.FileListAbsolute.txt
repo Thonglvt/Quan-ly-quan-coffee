@@ -17,7 +17,6 @@ E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\BLL\bin\Debug\DTO.dll
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\BLL\bin\Debug\DAL.pdb
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\BLL\bin\Debug\DTO.pdb
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\BLL\bin\Debug\DTO.dll.config
-E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\BLL\obj\Debug\BLL.csproj.CopyComplete
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\BLL\obj\Debug\BLL.dll

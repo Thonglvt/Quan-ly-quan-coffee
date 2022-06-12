@@ -20,7 +20,7 @@ namespace GUI
 
         }
 
-        public void InitData(List<DTO_KhachHangHoaDon> pLstKHHD)
+        public void InitData(List<DTO_KhachHangHoaDon> pLstKHHD, double pTienKDua,double pTienThoi)
         {
             string tenKH = "";
             DateTime ngaylap = new DateTime();
@@ -28,21 +28,16 @@ namespace GUI
             string maBan = "";
             foreach (DTO_KhachHangHoaDon item in pLstKHHD)
             {
-                //pKhachHang.Value = item.TenKH;
-                //pNgayLap.Value = item.NgayLap;
-                //pMaHD.Value = item.MaHD;
-                //pBan.Value = item.MaBan;
-                tenKH = item.TenKH;
-                ngaylap = item.NgayLap;
-                maHD = item.MaHD;
-                maBan = item.MaBan;
+                pKhachHang.Value = item.TenKH;
+                pNgayLap.Value = item.NgayLap;
+                pMaHD.Value = item.MaHD;
+                pBan.Value = item.MaBan;
+                this.pTienKDua.Value = pTienKDua;
+                this.pTienThoi.Value = pTienThoi;
+                objectDataSource2.DataSource = pLstKHHD;
                 break;
             }
-            objectDataSource2.DataSource = pLstKHHD;
-            pKhachHang.Value = tenKH;
-            pNgayLap.Value = ngaylap;
-            pMaHD.Value = maHD;
-            pBan.Value = maBan;
+           
             
         }
     }

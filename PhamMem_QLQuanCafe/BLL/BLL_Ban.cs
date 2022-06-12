@@ -17,6 +17,11 @@ namespace BLL
             dalBan = new DAL_Ban();
             return dalBan.getAll();
         }
+        public List<tblBan> getBanTrong()
+        {
+            dalBan = new DAL_Ban();
+            return dalBan.getBanTrong().OrderBy(t=>Convert.ToInt32(t.MaBan)).ToList();
+        }
         public tblBan findBanByMa(string pMaBan)
         {
             dalBan = new DAL_Ban();

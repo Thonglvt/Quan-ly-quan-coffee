@@ -396,6 +396,16 @@ as
 	where MaHD = (Select MaHD from inserted)
 go
 
+----------Tự động cập nhật TongTien tblHoaDonBanHang khi cập nhật tblHoaDonBanHang
+Go
+CREATE TRIGGER tg_AutoUpdTongTien_TongTien_HDBH on tblHoaDonBanHang
+for update
+as
+	update tblHoaDonBanHang
+	set TongTien = (Select sum(ThanhTien) from tblChiTietHD where MaHD = (Select MaHD from inserted))
+	 + ((TongTien*PhuThu)/100) - ((TongTien*GiamGia)/100)
+	where MaHD = (Select MaHD from inserted)
+go
 
 
 

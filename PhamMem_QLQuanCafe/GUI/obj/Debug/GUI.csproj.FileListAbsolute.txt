@@ -401,5 +401,8 @@ E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\bin\Debug\DevExpress
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\bin\Debug\Dapper.dll
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\bin\Debug\Dapper.xml
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\obj\Debug\GUI.FrmPrint.resources
-E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\obj\Debug\GUI.InvoiceReport.resources
+E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\obj\Debug\GUI.FrmDialogDoiBan.resources
+E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\obj\Debug\GUI.FrmHoaDonBanHang.resources
+E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\GUI\obj\Debug\GUI.FrmBan.resources

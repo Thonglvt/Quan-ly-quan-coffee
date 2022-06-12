@@ -16,11 +16,17 @@ namespace DAL
             db = new QL_QuanCafeUpdateDataContext();
             return db.tblBans.OrderBy(t=>Convert.ToInt32(t.MaBan)).ToList();
         }
+        public List<tblBan> getBanTrong()
+        {
+            db = new QL_QuanCafeUpdateDataContext();
+            return db.tblBans.Where(t=>t.TrangThai == false).ToList();
+        }
         public tblBan findBanByMa(string pMaBan)
         {
             db = new QL_QuanCafeUpdateDataContext();
             return db.tblBans.FirstOrDefault(t => t.MaBan == pMaBan);
         }
+
         public string chuyenDoiTrangThaiBan(string pMaBan)
         {
             try

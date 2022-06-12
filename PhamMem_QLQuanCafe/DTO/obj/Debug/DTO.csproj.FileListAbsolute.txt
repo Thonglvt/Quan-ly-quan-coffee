@@ -10,3 +10,4 @@ E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\DTO\bin\Debug\DTO.pdb
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\DTO\obj\Debug\DTO.dll
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\DTO\obj\Debug\DTO.pdb
+E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache

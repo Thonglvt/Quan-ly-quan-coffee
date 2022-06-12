@@ -26,6 +26,16 @@ namespace BLL
             dalHDBD = new DAL_HoaDonBanHang();
             return dalHDBD.getHDBy_MaHD(pMaHD);
         }
+        public List<DTO_KhachHangHoaDon> getHD_KH_NV()
+        {
+            dalHDBD = new DAL_HoaDonBanHang();
+            return dalHDBD.getHD_KH_NV().OrderByDescending(a => a.NgayLap).ToList();
+        }
+        public List<DTO_KhachHangHoaDon> getHD_KH_NV_ByMaNV(string pMaNV)
+        {
+            dalHDBD = new DAL_HoaDonBanHang();
+            return dalHDBD.getHD_KH_NV().Where(t=>t.MaNV == pMaNV).OrderByDescending(a => a.NgayLap).ToList();
+        }
         public string chuyenDoiTrangThaiHD(string pMaHD)
         {
             dalHDBD = new DAL_HoaDonBanHang();

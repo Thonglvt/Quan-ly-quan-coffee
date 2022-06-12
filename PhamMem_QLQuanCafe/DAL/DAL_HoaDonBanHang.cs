@@ -35,7 +35,31 @@ namespace DAL
             db = new QL_QuanCafeUpdateDataContext();
             return db.tblHoaDonBanHangs.FirstOrDefault(t => t.MaHD == pMaHD);
         }
-
+        public List<DTO_KhachHangHoaDon> getHD_KH_NV()
+        {
+            db = new QL_QuanCafeUpdateDataContext();
+            var lst = from a in db.tblHoaDonBanHangs
+                      join b in db.tblKhachHangs on a.MaKH equals b.MaKH
+                      join c in db.tblNhanViens on a.MaNV equals c.MaNV
+                      join d in db.tblBans on a.MaBan equals d.MaBan
+                      select new DTO_KhachHangHoaDon
+                      {
+                          TenBan = d.TenBan,
+                          STT = 0,
+                          MaHD = a.MaHD,
+                          TenKH = b.TenKH,
+                          TenNV = c.TenNV,
+                          MaNV = a.MaNV,
+                          MaBan = a.MaBan,
+                          NgayLap = Convert.ToDateTime(a.NgayLap),
+                          PhuThu = Convert.ToInt32(a.PhuThu),
+                          GiamGia = Convert.ToInt32(a.GiamGia),
+                          TongTien = Convert.ToDouble(a.TongTien),
+                          StrTrangThai = (Convert.ToBoolean(a.TrangThai) == true) ? "Đã thanh toán" : "Chưa thanh toán"
+                      };
+            return lst.ToList();
+        }
+        
         public string insert(tblHoaDonBanHang pHDBH)
         {
             try

@@ -102,8 +102,9 @@ namespace GUI
         {
             fplHienThiBan.Controls.Clear();
             bllBan = new BLL_Ban();
-            List<tblBan> lstBan = bllBan.getAll();
-            foreach (tblBan ban in lstBan)
+            DTO_SessionHoaDon.danhSachBan = new List<tblBan>();
+            DTO_SessionHoaDon.danhSachBan = bllBan.getAll();
+            foreach (tblBan ban in DTO_SessionHoaDon.danhSachBan)
             {
                 Button btn = new Button() { Width = FrmNghiepVuChinh.tableWidth, Height = FrmNghiepVuChinh.tableHeigth };
                 btn.Text = ban.TenBan;
@@ -174,10 +175,10 @@ namespace GUI
             bllBan = new BLL_Ban();
             bllHDBH = new BLL_HoaDonBanHang();
             Button btn = sender as Button;
-            //Lưu thôn tin bàn đang chọn
+
+            //Lưu thông tin bàn đang chọn
             DTO_SessionHoaDon.banDangChon = new tblBan();
             DTO_SessionHoaDon.banDangChon = bllBan.findBanByMa(btn.Name);
-
             //Nếu bàn trống
             if (btn.BackColor != Color.Red)
             {
@@ -194,6 +195,7 @@ namespace GUI
                 DTO_SessionHoaDon.HDKH_HienTai = new List<DTO_KhachHangHoaDon>();
                 return;
             }
+            
             //Đóng mở bàn
             btnMoBan.Enabled = false;
             btnThemMon.Enabled = true;
@@ -495,16 +497,30 @@ namespace GUI
             bllBan = new BLL_Ban();
             try
             {
-                    //Cập nhật trạng thái hóa đơn đã thanh toán
-                    string kqUpdHD = bllHDBH.chuyenDoiTrangThaiHD(DTO_SessionHoaDon.HD_HienTai.MaHD);
+                
+                DTO_SessionHoaDon.HD_HienTai.PhuThu = (string.IsNullOrEmpty(txtPhuThu.Value.ToString())) ? DTO_SessionHoaDon.HD_HienTai.PhuThu : Convert.ToInt32(txtPhuThu.Value);
+                DTO_SessionHoaDon.HD_HienTai.GiamGia = (string.IsNullOrEmpty(txtGiamGia.Value.ToString())) ? DTO_SessionHoaDon.HD_HienTai.PhuThu : Convert.ToInt32(txtGiamGia.Value);
+                //Cập nhật phụ thu, giảm giá
+                string cn = bllHDBH.update(DTO_SessionHoaDon.HD_HienTai);
+
+                DTO_SessionHoaDon.HDKH_HienTai = bllCTHDBH.getAll_KH_BG_SP_ByMaHD(DTO_SessionHoaDon.HD_HienTai.MaHD);
+                DTO_SessionHoaDon.HD_HienTai = bllHDBH.getHDBy_MaHD(DTO_SessionHoaDon.HD_HienTai.MaHD);
+
+                //Cập nhật trạng thái hóa đơn đã thanh toán
+                string kqUpdHD = bllHDBH.chuyenDoiTrangThaiHD(DTO_SessionHoaDon.HD_HienTai.MaHD);
                     //Cập nhật trạng thái bàn thành trống
-                    string kqUpdBan = bllBan.chuyenDoiTrangThaiBan(DTO_SessionHoaDon.HD_HienTai.MaBan);
+                string kqUpdBan = bllBan.chuyenDoiTrangThaiBan(DTO_SessionHoaDon.HD_HienTai.MaBan);
                 using (FrmPrint frm = new FrmPrint())
                 {
-                    frm.printInvoice(DTO_SessionHoaDon.HDKH_HienTai);
+                    double tienKDua = (string.IsNullOrEmpty(txtTienNhan.Value.ToString())) ? 0 : Convert.ToDouble(txtTienNhan.Value);
+                    double thoi = (txtTienThua.Text == String.Empty)?0: Convert.ToDouble(tienKDua - DTO_SessionHoaDon.HD_HienTai.TongTien);
+                    frm.printInvoice(DTO_SessionHoaDon.HDKH_HienTai, tienKDua, thoi);
                     frm.ShowDialog();
                 }
                 loaddAll();
+                DTO_SessionHoaDon.HDKH_HienTai = new List<DTO_KhachHangHoaDon>();
+                DTO_SessionHoaDon.HD_HienTai = new tblHoaDonBanHang();
+                DTO_SessionHoaDon.banDangChon = new tblBan();
                 emptyCTHD();
                 btnThanhToan.Enabled = false;
                 btnThemMon.Enabled = false;
@@ -544,9 +560,44 @@ namespace GUI
             XtraMessageBox.Show("Error: "+kqDelHD, "Thông báo [Message]"
                 , MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-       
+        private void btnDoiBan_Click(object sender, EventArgs e)
+        {
+            if(DTO_SessionHoaDon.HDKH_HienTai.Count==0)
+            {
+                XtraMessageBox.Show("Không thể đổi bàn này! (Chọn bàn có khách hoặc đã có món để đổi)", "Thông báo [Message]"
+                          , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            FrmDialogDoiBan frm = new FrmDialogDoiBan();
+            frm.ReloadData_FormCha = new FrmDialogDoiBan.LoadDLFormCha(loaddAll);
+            frm.ShowDialog();
+            
+        }
+
         #endregion
 
+        private void btnMoThemBan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bllBan = new BLL_Ban();
+            List<tblBan> lstBan = new List<tblBan>();
+            lstBan = bllBan.getAll();
+            int last = Convert.ToInt32(lstBan.Last().MaBan);
+            tblBan ban = new tblBan();
+            ban.MaBan = (last + 1).ToString();
+            ban.TenBan = "Bàn " + (last + 1);
+            ban.SoCho = 4;
 
+            string kqThemBan = bllBan.insert(ban);
+            if (kqThemBan.Equals("1"))
+            {
+                loadBan();
+                XtraMessageBox.Show("Đã mở thêm "+ ban.TenBan, "Thông báo [Message]"
+                          , MessageBoxButtons.OK, MessageBoxIcon.None);
+                return;
+            }
+            XtraMessageBox.Show("Error: " + kqThemBan, "Thông báo [Message]"
+                          , MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
     }
 }

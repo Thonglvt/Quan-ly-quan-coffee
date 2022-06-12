@@ -15,7 +15,9 @@ namespace DTO
         public string SDT { get; set; }
         public string MaHD { get; set; }
         public string MaNV { get; set; }
+        public string TenNV { get; set; }
         public string MaBan { get; set; }
+        public string TenBan { get; set; }
         public DateTime NgayLap { get; set; }
         public int PhuThu { get; set; }
         public int GiamGia { get; set; }
@@ -28,8 +30,9 @@ namespace DTO
         public double DonGia { get; set; }
         public double ThanhTien { get; set; }
         public bool TrangThai { get; set; }
+        public string StrTrangThai { get; set; }
 
-        
+
 
 
     }

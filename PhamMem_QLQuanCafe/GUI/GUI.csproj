@@ -93,6 +93,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBan.Designer.cs">
+      <DependentUpon>FrmBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCaLamViec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,11 +117,23 @@
     <Compile Include="FrmChiTietCong.Designer.cs">
       <DependentUpon>FrmChiTietCong.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDialogDoiBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDialogDoiBan.Designer.cs">
+      <DependentUpon>FrmDialogDoiBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDSDangKyCa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmDSDangKyCa.Designer.cs">
       <DependentUpon>FrmDSDangKyCa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHoaDonBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHoaDonBanHang.Designer.cs">
+      <DependentUpon>FrmHoaDonBanHang.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -149,6 +167,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmBan.resx">
+      <DependentUpon>FrmBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCaLamViec.resx">
       <DependentUpon>FrmCaLamViec.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,8 +179,14 @@
     <EmbeddedResource Include="FrmChiTietCong.resx">
       <DependentUpon>FrmChiTietCong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDialogDoiBan.resx">
+      <DependentUpon>FrmDialogDoiBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDSDangKyCa.resx">
       <DependentUpon>FrmDSDangKyCa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHoaDonBanHang.resx">
+      <DependentUpon>FrmHoaDonBanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -369,6 +396,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconcoffee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconBIll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconHD2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unlockicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistical_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\functionsstatistical.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refreshpivottable.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoandoiicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconPlus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconthanhtoan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconHoanDOi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x161.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

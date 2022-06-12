@@ -19,14 +19,14 @@ namespace GUI
             InitializeComponent();
         }
 
-        public void printInvoice(List<DTO_KhachHangHoaDon> lstKHHD)
+        public void printInvoice(List<DTO_KhachHangHoaDon> lstKHHD, double pTienKDua,double pTienThoi)
         {
             InvoiceReport report = new InvoiceReport();
             foreach (DevExpress.XtraReports.Parameters.Parameter p in report.Parameters)
             {
                 p.Visible = true;
             }
-            report.InitData(lstKHHD);
+            report.InitData(lstKHHD, pTienKDua, pTienThoi);
             documentViewer1.DocumentSource = report;
             report.CreateDocument();
             report.RequestParameters = false;

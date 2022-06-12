@@ -35,12 +35,17 @@ namespace GUI
             this.btnCaLamViec = new DevExpress.XtraBars.BarButtonItem();
             this.btnChamCong = new DevExpress.XtraBars.BarButtonItem();
             this.btnGoiMon = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageNhanSu = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnHoaDon = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageThuNgan = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageNhanSu = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -55,14 +60,17 @@ namespace GUI
             this.btnNhanVien,
             this.btnCaLamViec,
             this.btnChamCong,
-            this.btnGoiMon});
+            this.btnGoiMon,
+            this.btnHoaDon,
+            this.skinRibbonGalleryBarItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl1.MaxItemId = 7;
+            this.ribbonControl1.MaxItemId = 9;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPageThuNgan,
             this.ribbonPageNhanSu,
-            this.ribbonPageThuNgan});
+            this.ribbonPage1});
             this.ribbonControl1.Size = new System.Drawing.Size(1250, 193);
             // 
             // btnNhanVien
@@ -111,6 +119,29 @@ namespace GUI
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.btnGoiMon.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGoiMon_ItemClick);
             // 
+            // btnHoaDon
+            // 
+            this.btnHoaDon.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            this.btnHoaDon.Caption = "Hóa đơn bán hàng";
+            this.btnHoaDon.Id = 7;
+            this.btnHoaDon.ImageOptions.Image = global::GUI.Properties.Resources.iconHD2;
+            this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnHoaDon.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHoaDon_ItemClick);
+            // 
+            // ribbonPageThuNgan
+            // 
+            this.ribbonPageThuNgan.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup2});
+            this.ribbonPageThuNgan.Name = "ribbonPageThuNgan";
+            this.ribbonPageThuNgan.Text = "Thu ngân";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnGoiMon);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            // 
             // ribbonPageNhanSu
             // 
             this.ribbonPageNhanSu.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -126,17 +157,18 @@ namespace GUI
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Quản lý chấm công";
             // 
-            // ribbonPageThuNgan
+            // ribbonPage1
             // 
-            this.ribbonPageThuNgan.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2});
-            this.ribbonPageThuNgan.Name = "ribbonPageThuNgan";
-            this.ribbonPageThuNgan.Text = "Thu ngân";
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup3,
+            this.ribbonPageGroup4});
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "Quản lý";
             // 
-            // ribbonPageGroup2
+            // ribbonPageGroup3
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnGoiMon);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnHoaDon, true);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
             // documentManager1
             // 
@@ -145,6 +177,18 @@ namespace GUI
             this.documentManager1.View = this.tabbedView1;
             this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "Giao diện";
+            // 
+            // skinRibbonGalleryBarItem1
+            // 
+            this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
+            this.skinRibbonGalleryBarItem1.Id = 8;
+            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
             // 
             // FrmMain
             // 
@@ -181,6 +225,11 @@ namespace GUI
         private DevExpress.XtraBars.BarButtonItem btnGoiMon;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageThuNgan;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem btnHoaDon;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
     }
 }
 

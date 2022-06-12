@@ -16,4 +16,3 @@ E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\DAL\obj\Debug\DAL.csproj
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\DAL\obj\Debug\DAL.dll
 E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\DAL\obj\Debug\DAL.pdb
-E:\PTHTTT\github\Quan-ly-quan-coffee\PhamMem_QLQuanCafe\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
