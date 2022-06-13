@@ -581,11 +581,24 @@ namespace GUI
             bllBan = new BLL_Ban();
             List<tblBan> lstBan = new List<tblBan>();
             lstBan = bllBan.getAll();
-            int last = Convert.ToInt32(lstBan.Last().MaBan);
+            int last;
             tblBan ban = new tblBan();
-            ban.MaBan = (last + 1).ToString();
-            ban.TenBan = "Bàn " + (last + 1);
-            ban.SoCho = 4;
+            try
+            {
+                last = Convert.ToInt32(lstBan.Last().MaBan);
+                ban.MaBan = (last + 1).ToString();
+                ban.TenBan = "Bàn " + (last + 1);
+                ban.SoCho = 4;
+                ban.TrangThai = false;
+            }
+            catch (Exception)
+            {
+                ban.MaBan = "1";
+                ban.TenBan = "Bàn 1";
+                ban.SoCho = 4;
+                ban.TrangThai = false;
+            }
+            
 
             string kqThemBan = bllBan.insert(ban);
             if (kqThemBan.Equals("1"))
