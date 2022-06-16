@@ -157,6 +157,13 @@ namespace GUI
             //Tính giá giảm giá thu thông qua % giảm giá
             txtGiaGiamGia.Text = string.Format("{0:0,0 đ}", giaGiamGia);
         }
+        void luuSessionHienTai(string maHD)
+        {
+            bllHDBH = new BLL_HoaDonBanHang();
+            DTO_SessionHoaDon.HD_HienTai = bllHDBH.getHDBy_MaHD(maHD);
+            DTO_SessionHoaDon.HDKH_HienTai = bllCTHDBH.getAll_KH_BG_SP_ByMaHD(maHD);
+        }
+        
         #endregion
 
         #region Event
@@ -236,7 +243,6 @@ namespace GUI
                 double tongTienHD = Convert.ToDouble(hd.TongTien);
                 double giaPhuThu = (tongTienHD * Convert.ToDouble(phuThu)) / 100;
                 double giaGiamGia = (tongTienHD * Convert.ToDouble(giamGia)) / 100;
-                
                 ganTextBoxTongTien(tongTienCTHD, phuThu, giaPhuThu, giamGia, giaGiamGia, tongTienHD, 0);
             }
 
@@ -443,8 +449,7 @@ namespace GUI
                     string kqUpd = bllCTHDBH.updateSoLuongTang(cthd);
                     gcCTHD.DataSource = bllCTHDBH.getAll_KH_BG_SP_ByMaHD(maHD);
                     //Gán Hóa đơn khách hàng hiện tại
-                    DTO_SessionHoaDon.HD_HienTai = bllHDBH.getHDBy_MaHD(maHD);
-                    DTO_SessionHoaDon.HDKH_HienTai = bllCTHDBH.getAll_KH_BG_SP_ByMaHD(maHD);
+                    luuSessionHienTai(maHD);
                     //
                     //Gán dữ liệu tổng tiền, giảm giá, phụ thu
                     tongTienCTHD = DTO_SessionHoaDon.HDKH_HienTai.Sum(t => t.ThanhTien);
@@ -473,8 +478,7 @@ namespace GUI
                 //Load lại lưới chi tiết đơn hàng
                 gcCTHD.DataSource = bllCTHDBH.getAll_KH_BG_SP_ByMaHD(maHD);
                 //Gán Hóa đơn khách hàng hiện tại
-                DTO_SessionHoaDon.HD_HienTai = bllHDBH.getHDBy_MaHD(maHD);
-                DTO_SessionHoaDon.HDKH_HienTai = bllCTHDBH.getAll_KH_BG_SP_ByMaHD(maHD);
+                luuSessionHienTai(maHD);
                 //
                 //Mở nút thanh toán khi có món (Có cthd)
                 btnThanhToan.Enabled = (DTO_SessionHoaDon.HDKH_HienTai.Count == 0) ? false : true;
@@ -502,13 +506,11 @@ namespace GUI
                 DTO_SessionHoaDon.HD_HienTai.GiamGia = (string.IsNullOrEmpty(txtGiamGia.Value.ToString())) ? DTO_SessionHoaDon.HD_HienTai.PhuThu : Convert.ToInt32(txtGiamGia.Value);
                 //Cập nhật phụ thu, giảm giá
                 string cn = bllHDBH.update(DTO_SessionHoaDon.HD_HienTai);
-
-                DTO_SessionHoaDon.HDKH_HienTai = bllCTHDBH.getAll_KH_BG_SP_ByMaHD(DTO_SessionHoaDon.HD_HienTai.MaHD);
-                DTO_SessionHoaDon.HD_HienTai = bllHDBH.getHDBy_MaHD(DTO_SessionHoaDon.HD_HienTai.MaHD);
-
+                //Lưu lại session hiện tại
+                luuSessionHienTai(DTO_SessionHoaDon.HD_HienTai.MaHD);
                 //Cập nhật trạng thái hóa đơn đã thanh toán
                 string kqUpdHD = bllHDBH.chuyenDoiTrangThaiHD(DTO_SessionHoaDon.HD_HienTai.MaHD);
-                    //Cập nhật trạng thái bàn thành trống
+                //Cập nhật trạng thái bàn thành trống
                 string kqUpdBan = bllBan.chuyenDoiTrangThaiBan(DTO_SessionHoaDon.HD_HienTai.MaBan);
                 using (FrmPrint frm = new FrmPrint())
                 {
@@ -573,9 +575,6 @@ namespace GUI
             frm.ShowDialog();
             
         }
-
-        #endregion
-
         private void btnMoThemBan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             bllBan = new BLL_Ban();
@@ -598,13 +597,13 @@ namespace GUI
                 ban.SoCho = 4;
                 ban.TrangThai = false;
             }
-            
+
 
             string kqThemBan = bllBan.insert(ban);
             if (kqThemBan.Equals("1"))
             {
                 loadBan();
-                XtraMessageBox.Show("Đã mở thêm "+ ban.TenBan, "Thông báo [Message]"
+                XtraMessageBox.Show("Đã mở thêm " + ban.TenBan, "Thông báo [Message]"
                           , MessageBoxButtons.OK, MessageBoxIcon.None);
                 return;
             }
@@ -612,5 +611,8 @@ namespace GUI
                           , MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
+        #endregion
+
+
     }
 }
